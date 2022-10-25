@@ -1,4 +1,4 @@
-//code by RACHIT //
+//code by RACHIT\\
 var paddle2 =10,paddle1=10;
 
 var paddle1X = 10,paddle1Height = 110;
@@ -201,7 +201,7 @@ function models(){
     fill(255);
     noStroke();
     text("Width:"+width,135,15);
-    text("Speed:"+abs(ball.dx),50,15); 
+    text("Speed:"+abs(ball.dx),50,15);
     text("Height:"+height,235,15)
 }
 
