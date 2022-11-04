@@ -10,7 +10,7 @@ var paddle1Y;
 var  playerscore =0;
 
 var pcscore =0;
-//ball x and y and speedx speed y and radius
+//ball x and y and speed x speed y and radius
 var ball = {
     x:350/2,
     y:480/2,
@@ -24,6 +24,7 @@ rightWristX = 0;
 scoreRightWrist = 0;
 
 game_status = "";
+
 
 
  function preload() {
@@ -59,7 +60,8 @@ function gotPoses(results)
   }
 }
 
-function startGame(){
+function startGame()
+{
   game_status = "start";
   document.getElementById("status").innerHTML = "Game Is Loading";
 }
@@ -123,7 +125,7 @@ function draw(){
 
 //function reset when ball does notcame in the contact of padde
 function reset(){
-   ball.x = width/2+100,
+     ball.x = width/2+100,
    ball.y = height/2+100;
    ball.dx=3;
    ball.dy =3;   
@@ -166,7 +168,7 @@ function move(){
        ball.dx=-ball.dx-0.5;       
    }
   if (ball.x-2.5*ball.r/2< 0){
-  if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) {
+  if (ball.y >= paddle1Y&& ball.y <= paddle1Y + paddle1Height) { 
     ball.dx = -ball.dx+0.5; 
     ball_touch_paddel.play();
   }
@@ -185,7 +187,7 @@ if(pcscore ==4){
     stroke("white");
     textSize(25);
     text("Game Over!",width/2,height/2);
-    text("Press the restart button to play again!",width/2,height/2+30)
+    text("Press Restart button to play again!",width/2,height/2+30)
     noLoop();
     pcscore = 0;
 }
@@ -222,4 +224,4 @@ function restart()
 {
   pcscore = 0;
   loop();
-}
+} 
